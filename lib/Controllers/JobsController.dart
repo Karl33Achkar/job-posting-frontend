@@ -12,7 +12,7 @@ class JobsController extends GetxController {
     try {
       jobsList.clear(); // Clear the current jobs list before each search
       if (query.isNotEmpty) {
-        final response = await DioClient().getInstance().get("http://192.x.x.x:8000/api/search", queryParameters: {'q': query});
+        final response = await DioClient().getInstance().get("http://x.x.x.x:8000/api/search", queryParameters: {'q': query});
         if (response.statusCode == 200) {
           final jobsData = response.data['data'] as List;
           jobsList.assignAll(jobsData.map((job) => Jobs.fromJson(job)).toList());
