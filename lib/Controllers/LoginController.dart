@@ -34,7 +34,7 @@ class LoginController  extends GetxController {
     User user = User(email: email.value.text, password: password.value.text);
     String requestBody = user.toJson();
 
-    var post = await DioClient().getInstance().post("http://192.168.1.112:8000/api/login", data: requestBody);
+    var post = await DioClient().getInstance().post("http://x.x.x.x:8000/api/login", data: requestBody);
     if (post.statusCode == 200) {
       showSuccessDialog(Get.context!, "Success", "User Logged In Successfully", () {
         print(post.data);
