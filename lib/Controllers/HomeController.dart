@@ -18,7 +18,7 @@ class HomeController extends GetxController {
   void fetchJobs() async {
     try {
       isLoading(true);
-      var response = await DioClient().getInstance().get("http://192.x.x.x:8000/api/jobs");
+      var response = await DioClient().getInstance().get("http://x.x.x.x:8000/api/jobs");
       if (response.statusCode == 200 && response.data != null) {
         var jobsData = response.data['data'] as List;
         jobs.value = jobsData.map((job) => Jobs.fromJson(job)).toList();
