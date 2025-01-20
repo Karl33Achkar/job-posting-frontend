@@ -59,7 +59,7 @@ class ApplyController extends GetxController {
       });
 
       // Send the POST request
-      final response = await DioClient().getInstance().post('http://192.x.x.x:8000/api/apply', // Replace with your backend URL
+      final response = await DioClient().getInstance().post('http://x.x.x.x:8000/api/apply', // Replace with your backend URL
         data: formData,
       );
 
