@@ -19,7 +19,7 @@ class RegistrationController extends GetxController {
 
     try {
       var post = await DioClient().getInstance().post(
-        "http://192.168.1.112:8000/api/register",
+        "http://x.x.x.x:8000/api/register",
         data: user.toJson(),
       );
 
