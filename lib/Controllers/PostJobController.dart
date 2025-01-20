@@ -27,7 +27,7 @@ class PostJobController extends GetxController {
 
     try {
       // Make the POST request with JSON data
-      final response = await DioClient().getInstance().post("http://192.168.1.112:8000/api/postjobs", // Adjust this URL as needed
+      final response = await DioClient().getInstance().post("http://x.x.x.x:8000/api/postjobs", // Adjust this URL as needed
         data: newJob.toJson(), // Convert the Jobs object to JSON
         options: dio.Options(
           headers: {
